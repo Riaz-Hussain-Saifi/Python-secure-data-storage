@@ -1,10 +1,12 @@
 # Secure Data Encryption System (Streamlit Demo)
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-brightgreen)](https://streamlit.io)
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live_App-brightgreen)](https://secure-data-storage.streamlit.app/)
 [![Cryptography](https://img.shields.io/badge/cryptography-Fernet-yellow)](https://cryptography.io/en/latest/fernet/)
 
 A simple web application built with Streamlit to demonstrate secure encryption and decryption of text data using user-defined passkeys. Data is encrypted using the Fernet symmetric encryption scheme from the `cryptography` library.
+
+**➡️ Try the live demo here: https://secure-data-storage.streamlit.app/**
 
 **Note:** This application uses Streamlit's session state for storage. This means **all stored data is temporary and will be lost** when the Streamlit server stops or restarts, or the user session ends. It serves as a demonstration of encryption principles within a web app context, not as a persistent secure storage solution.
 
@@ -40,12 +42,12 @@ A simple web application built with Streamlit to demonstrate secure encryption a
 *   **Cryptography:** Python library providing cryptographic recipes (specifically Fernet for symmetric encryption).
 *   **Hashlib:** Standard Python library for hashing (used for passkeys).
 
-## Setup and Installation
+## Setup and Installation (Local)
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repository-url>
-    cd secure-data-storage
+    git clone https://github.com/Riaz-Hussain-Saifi/Python-secure-data-storage.git
+    cd Python-secure-data-storage
     ```
 2.  **Create a virtual environment (recommended):**
     ```bash
@@ -73,14 +75,15 @@ A simple web application built with Streamlit to demonstrate secure encryption a
 
 ## Usage
 
-1.  Navigate using the sidebar: "Home", "Store Data", "Retrieve Data".
-2.  **Store Data:**
+1.  Access the live app: https://secure-data-storage.streamlit.app/ OR run it locally as described above.
+2.  Navigate using the sidebar: "Home", "Store Data", "Retrieve Data".
+3.  **Store Data:**
     *   Go to the "Store Data" page.
     *   Enter a unique identifier (e.g., `my_secret_notes`).
     *   Enter the text you want to encrypt in the text area.
     *   Enter a secure passkey (you'll need this later).
     *   Click "Encrypt & Save". The encrypted text will be shown.
-3.  **Retrieve Data:**
+4.  **Retrieve Data:**
     *   Go to the "Retrieve Data" page.
     *   Select the ID of the data you want to retrieve from the dropdown.
     *   Enter the correct passkey you used when storing the data.
